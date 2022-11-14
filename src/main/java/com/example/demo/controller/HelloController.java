@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @RequestMapping("/hello")
     public String Hello(@RequestParam String name){
-        return ("HelloWorld,你好世界"+name);
+        return ("你好"+name);
     }
     @PostMapping("/study")
     public String study(@RequestParam String book){
