@@ -15,6 +15,10 @@ public class HelloController {
     public String Hello(@RequestParam String name){
         return ("你好"+name);
     }
+    @RequestMapping("/hello")
+    public String Hello22(@RequestParam String name){
+        return ("你好"+name);
+    }
     @PostMapping("/study")
     public String study(@RequestParam String book){
         return ("HelloWorld,来读这本"+book);
