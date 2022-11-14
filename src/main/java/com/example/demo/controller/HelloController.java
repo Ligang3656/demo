@@ -1,10 +1,7 @@
 package com.example.demo.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @description
@@ -20,6 +17,10 @@ public class HelloController {
     }
     @PostMapping("/study")
     public String study(@RequestParam String book){
+        return ("HelloWorld,来读这本"+book);
+    }
+    @GetMapping ("/say")
+    public String say(@RequestParam String book){
         return ("HelloWorld,来读这本"+book);
     }
 }
