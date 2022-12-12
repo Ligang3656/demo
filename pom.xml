@@ -36,6 +36,11 @@
             <!--true表示依赖不会传递-->
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

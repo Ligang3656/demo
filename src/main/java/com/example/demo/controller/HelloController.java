@@ -1,7 +1,8 @@
 package com.example.demo.controller;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * @description
@@ -11,6 +12,12 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HelloController {
+
+    private final RestTemplate restTemplate;
+    public HelloController(RestTemplateBuilder restTemplateBuilder){
+        this.restTemplate=restTemplateBuilder.build();
+    }
+
     @RequestMapping("/hello")
     public String Hello(@RequestParam String name){
         return ("你好"+name);
